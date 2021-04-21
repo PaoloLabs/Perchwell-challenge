@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52A0DB55262FAD0B0021057C /* iphone11.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A0DB54262FAD0B0021057C /* iphone11.png */; };
 		52E96B1F262FA7A400D1F628 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E96B1D262FA7A400D1F628 /* CustomTableViewCell.swift */; };
 		52E96B20262FA7A400D1F628 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E96B1E262FA7A400D1F628 /* CustomTableViewCell.xib */; };
 		52FDD90E262F35FD00988B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDD90D262F35FD00988B23 /* AppDelegate.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52A0DB54262FAD0B0021057C /* iphone11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone11.png; sourceTree = "<group>"; };
 		52E96B1D262FA7A400D1F628 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		52E96B1E262FA7A400D1F628 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		52FDD90A262F35FD00988B23 /* Coding-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coding-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				52FDD911262F35FD00988B23 /* ViewController.swift */,
 				52FDD913262F35FD00988B23 /* Main.storyboard */,
 				52FDD919262F35FE00988B23 /* Assets.xcassets */,
+				52A0DB54262FAD0B0021057C /* iphone11.png */,
 				52FDD91B262F35FE00988B23 /* LaunchScreen.storyboard */,
 				52FDD91E262F35FE00988B23 /* Info.plist */,
 				52FDD916262F35FD00988B23 /* Coding_Challenge.xcdatamodeld */,
@@ -334,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A0DB55262FAD0B0021057C /* iphone11.png in Resources */,
 				52FDD91D262F35FE00988B23 /* LaunchScreen.storyboard in Resources */,
 				52FDD964262F622700988B23 /* TableView.xib in Resources */,
 				52FDD91A262F35FE00988B23 /* Assets.xcassets in Resources */,
