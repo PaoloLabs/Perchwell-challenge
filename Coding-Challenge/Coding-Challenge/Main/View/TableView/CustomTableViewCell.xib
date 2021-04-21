@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,7 +25,23 @@
                     <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mMm-wk-kNV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoD-fu-6gd">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="leftAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9a6-Su-w0u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nls-7D-sEz">
+                                <rect key="frame" x="274" y="-1" width="46" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                <connections>
+                                    <action selector="rightAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dA6-7u-XCe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
             </tableViewCellContentView>
@@ -35,12 +50,7 @@
                 <outlet property="cellView" destination="mMm-wk-kNV" id="wyt-jJ-Pwg"/>
                 <outlet property="scrollView" destination="DfJ-DL-22s" id="Iv6-ik-DLd"/>
             </connections>
-            <point key="canvasLocation" x="-165" y="84"/>
+            <point key="canvasLocation" x="-165.21739130434784" y="83.705357142857139"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

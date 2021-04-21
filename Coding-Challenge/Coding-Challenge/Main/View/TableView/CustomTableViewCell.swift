@@ -28,9 +28,9 @@ class CustomTableViewCell: UITableViewCell {
         self.frame = cellFrame
         self.contentView.frame = cellFrame
         
-        let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
-        let view = UIView(frame: CGRect(x: self.scrollView.frame.width, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
-        let rightView = UIView(frame: CGRect(x: self.scrollView.frame.width * 2, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
+        let leftView = LeftView(frame: CGRect(x: 0.0, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
+        let view = CentralView(frame: CGRect(x: self.scrollView.frame.width, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
+        let rightView = RightView(frame: CGRect(x: self.scrollView.frame.width * 2, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
         
         leftView.backgroundColor = .red
         view.backgroundColor = .yellow
@@ -89,6 +89,45 @@ class CustomTableViewCell: UITableViewCell {
             else {
                 self.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width+(self.scrollView.frame.width/2.0), y: 0.0), animated: true)
             }
+        }
+    }
+    
+    @IBAction func rightAction(_ sender: UIButton) {
+        self.initialAction()
+        self.rightAction()
+    }
+    
+    @IBAction func leftAction(_ sender: UIButton) {
+        self.initialAction()
+        self.leftAction()
+        
+    }
+    
+    func initialAction() {
+        if self.isSwipeToLeft != 1 {
+            self.isSwipeToLeft = 1
+            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width, y: 0.0), animated: true)
+            return
+        }
+    }
+    
+    func rightAction() {
+        self.isSwipeToLeft = 2
+        if scrollView.contentOffset.x < scrollView.frame.size.width {
+            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width, y: 0.0), animated: true)
+        }
+        else {
+            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width+(self.scrollView.frame.width/2.0), y: 0.0), animated: true)
+        }
+    }
+    
+    func leftAction() {
+        self.isSwipeToLeft = 0
+        if scrollView.contentOffset.x < scrollView.frame.size.width {
+            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width, y: 0.0), animated: true)
+        }
+        else {
+            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width/2.0, y: 0.0), animated: true)
         }
     }
     
