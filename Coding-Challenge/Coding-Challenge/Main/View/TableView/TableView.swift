@@ -44,7 +44,9 @@ extension TableView: UITableViewDelegate, UITableViewDataSource {
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "\(CustomTableViewCell.self)") as! CustomTableViewCell
         let frame = CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: 64.0)
         cell.frame = frame
-        cell.configureCellView(cellFrame: frame)
+        cell.configureCellView(cellFrame: frame,
+                               tableView: self.tableView,
+                               indexPath: indexPath)
         return cell
     }
     

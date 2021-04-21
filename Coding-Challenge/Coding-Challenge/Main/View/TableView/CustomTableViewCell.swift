@@ -11,6 +11,8 @@ class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cellView: UIView!
+    var tableView = UITableView()
+    var indexPath = IndexPath()
     var isSwipeToLeft = 1
     
     override func awakeFromNib() {
@@ -24,9 +26,11 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCellView(cellFrame: CGRect) {
+    func configureCellView(cellFrame: CGRect, tableView: UITableView, indexPath: IndexPath) {
         self.frame = cellFrame
         self.contentView.frame = cellFrame
+        self.tableView = tableView
+        self.indexPath = indexPath
         
         let leftView = LeftView(frame: CGRect(x: 0.0, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
         let view = CentralView(frame: CGRect(x: self.scrollView.frame.width, y: 0.0, width: self.scrollView.frame.width, height: 64.0))
